@@ -69,6 +69,7 @@ describe('#parse - comma separated, surname first => "doe, john"', function() {
     });
 
 });
+
 describe('#parse - two names comma separated, surname first => "doe, john & jane"', function() {
 
     it('should extract two names', function() {
@@ -82,6 +83,7 @@ describe('#parse - two names comma separated, surname first => "doe, john & jane
         output2[0].should.deep.equal({ firstname : 'Dennis', lastname : 'Porter' });
         output2[1].should.deep.equal({ firstname : 'Deborah', lastname : 'Porter' });
     });
+
     it('should extract two names with middlename', function() {
         var output1 = parse('Aduku, Christina M. & Peter'),
             output2 = parse('Alexandr, Camille L. & Sheldon D.');
@@ -92,5 +94,57 @@ describe('#parse - two names comma separated, surname first => "doe, john & jane
         output2.length.should.equal( 2 );
         output2[0].should.deep.equal({ firstname : 'Camille', middlename : 'L', lastname : 'Alexandr' });
         output2[1].should.deep.equal({ firstname : 'Sheldon', middlename : 'D', lastname : 'Alexandr' });
-    })
+    });
+
 })
+
+describe('#parse - two names comma separated, two surnames => "doe, john & dae, jane"', function() {
+
+    it('should extract two names', function() {
+        var output1 = parse('Ali, Kevin & Doe, Lisa'),
+            output2 = parse('Porter, Dennis and Dae, Deborah');
+
+        output1.length.should.equal( 2 );
+        output1[0].should.deep.equal({ firstname : 'Kevin', lastname : 'Ali' });
+        output1[1].should.deep.equal({ firstname : 'Lisa', lastname : 'Doe' });
+        output2.length.should.equal( 2 );
+        output2[0].should.deep.equal({ firstname : 'Dennis', lastname : 'Porter' });
+        output2[1].should.deep.equal({ firstname : 'Deborah', lastname : 'Dae' });
+    });
+
+    it('should extract two names with middlename', function() {
+        var output1 = parse('Aduku, Christina M. & Dae, Peter'),
+            output2 = parse('Alexandr, Camille L. & Doe, Sheldon D.');
+
+        output1.length.should.equal( 2 );
+        output1[0].should.deep.equal({ firstname : 'Christina', middlename : 'M', lastname : 'Aduku' });
+        output1[1].should.deep.equal({ firstname : 'Peter', lastname : 'Dae' });
+        output2.length.should.equal( 2 );
+        output2[0].should.deep.equal({ firstname : 'Camille', middlename : 'L', lastname : 'Alexandr' });
+        output2[1].should.deep.equal({ firstname : 'Sheldon', middlename : 'D', lastname : 'Doe' });
+    });
+
+});
+
+describe('#parse - two names standard, two first names separated by "or|and|&" => "john or jane doe"', function() {
+
+    it('should extract two names', function() {
+        var output1 = parse('Jeanette or Whirlington Anderson'),
+            output2 = parse('Jeanette and Whirlington Anderson'),
+            output3 = parse('Jeanette & Whirlington Anderson');
+
+        output1.length.should.equal( 2 );
+        output1[0].should.deep.equal({ firstname : 'Jeanette', lastname : 'Anderson' });
+        output1[1].should.deep.equal({ firstname : 'Whirlington', lastname : 'Anderson' });
+
+        output2.length.should.equal( 2 );
+        output2[0].should.deep.equal({ firstname : 'Jeanette', lastname : 'Anderson' });
+        output2[1].should.deep.equal({ firstname : 'Whirlington', lastname : 'Anderson' });
+
+        output3.length.should.equal( 2 );
+        output3[0].should.deep.equal({ firstname : 'Jeanette', lastname : 'Anderson' });
+        output3[1].should.deep.equal({ firstname : 'Whirlington', lastname : 'Anderson' });
+
+    });
+
+});
