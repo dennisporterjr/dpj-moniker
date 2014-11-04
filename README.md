@@ -6,9 +6,9 @@ what is this?
 this is a utility that helps with english name/salutation/suffix parsing. this library will parse names in the following formats :
 - "john doe" (standard) //STANDARD
 - "doe, john" (surname first, separated by comma) // BYLAST
-- "doe, john & jane" (surname first, multiple firstnames separated by '&') // TWO-BY-LAST
-- "doe, john & dae, jane" (multiple names in BYLAST format separated by '&') // BY-LAST-TWO
-- "john or jane doe" (multiple firstnames separated by '&/and/or', more or less in STANDARD format) // TWO-STANDARD-AND-OR
+- "doe, john & jane" (surname first, multiple firstnames separated by 'and|&|or') // BY-LAST-MULTI-FIRST
+- "doe, john & dae, jane" (multiple names in BYLAST format separated by 'and|&|or') // MULTI-BY-LAST
+- "john or jane doe" (multiple firstnames separated by '&/and/or', more or less in STANDARD format) // MULTI-FIRST-STANDARD
 
 why?
 --------------------------------------
