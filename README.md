@@ -12,7 +12,7 @@ this is a utility that helps with english name/salutation/suffix parsing. this l
 
 why?
 --------------------------------------
-i needed to convert a long list of names with no firstname/lastname fields (~3000) into a normalized database with first, middle and last names all preferred. beyond the 3000 entries, each one of the primary entries had emergency contacts that also needed to placed in the database. i noticed a few patterns and automated the process. hopefully this can become more thorough and useful others in the future. 
+i needed to convert a long list of names with no firstname/lastname fields (~3000) into a normalized database with first, middle and last names all needed (middlename optional of course), each one of the primary entries had 0, 1, 2, or 3 emergency contacts that also needed to placed in the database as regular entries but linked to the original entries. i noticed a few patterns apparent in most of the ~10k entries and automated the process. it's served it's purpose, and hopefully this can become more thorough and useful to others in the future. 
 
 ### getting started
 installation
