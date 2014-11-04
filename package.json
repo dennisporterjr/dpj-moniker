@@ -1,6 +1,6 @@
 {
   "name": "dpj-moniker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "english name/salutation/suffix parsing.",
   "main": "./lib",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dennisporterjr/moniker.git"
+    "url": "https://github.com/dennisporterjr/dpj-moniker.git"
   },
   "keywords": [
     "name",
@@ -26,9 +26,9 @@
   "author": "Dennis Porter Jr",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dennisporterjr/moniker/issues"
+    "url": "https://github.com/dennisporterjr/dpj-moniker/issues"
   },
-  "homepage": "https://github.com/dennisporterjr/moniker",
+  "homepage": "https://github.com/dennisporterjr/dpj-moniker",
   "devDependencies": {
     "chai": "^1.9.2",
     "mocha": "^2.0.1"

@@ -1,4 +1,4 @@
-monikerjs
+dpj-moniker
 =======
 ### overview
 what is this?
@@ -19,7 +19,7 @@ installation
 --------------------------------------
 you can install moniker by running this command..
 ```shell
-npm install dpz-moniker
+npm install dpj-moniker
 ```
 
 use
