@@ -1,0 +1,36 @@
+{
+  "name": "moniker",
+  "version": "0.0.0",
+  "description": "english name/salutation/suffix parsing.",
+  "main": "./lib",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dennisporterjr/moniker.git"
+  },
+  "keywords": [
+    "name",
+    "parsing",
+    "parse",
+    "salutation",
+    "moniker",
+    "suffix",
+    "first",
+    "name",
+    "lastname",
+    "middle",
+    "name"
+  ],
+  "author": "Dennis Porter Jr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dennisporterjr/moniker/issues"
+  },
+  "homepage": "https://github.com/dennisporterjr/moniker",
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^2.0.1"
+  }
+}
