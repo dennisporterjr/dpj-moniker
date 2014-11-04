@@ -1,6 +1,6 @@
 {
   "name": "moniker",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "english name/salutation/suffix parsing.",
   "main": "./lib",
   "scripts": {
