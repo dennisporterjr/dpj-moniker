@@ -1,6 +1,6 @@
 {
-  "name": "moniker",
-  "version": "0.1.0",
+  "name": "dpj-moniker",
+  "version": "0.1.1",
   "description": "english name/salutation/suffix parsing.",
   "main": "./lib",
   "scripts": {

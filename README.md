@@ -1,4 +1,4 @@
-moniker.js
+monikerjs
 =======
 ### overview
 what is this?
@@ -19,13 +19,13 @@ installation
 --------------------------------------
 you can install moniker by running this command..
 ```shell
-npm install moniker
+npm install dpz-moniker
 ```
 
 use
 --------------------------------------
 ```js
-var moniker = require('moniker');
+var moniker = require('dpj-moniker');
 
 // parse a single name...
 moniker.parse('Tony Edward Stark'); 
